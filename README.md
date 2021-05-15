@@ -49,11 +49,4 @@ Seu apoio irá nos incentivar a sempre melhorar e nunca deixar o serviço cair.
 
 ## License
 
-MIT
-
-## Siga-me nas redes sociais:
-Dicas de tecnologia, direito e programação
-   [Facebook]: <facebook.com/hera.thiago>
-   [Instagram]: <https://github.com/joemccann/dillinger.git>
-   [Twitter]: <http://daringfireball.net>
-  
+APACHE
