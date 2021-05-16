@@ -33,7 +33,7 @@ var qEl = e => document.querySelector(e);
 Cole no console e aperte `enter`. A jurisprudência já está copiada e pronta para colar na sua petição.
 
 ## Tutorial em vídeo
-[![thumbnail]( "https://github.com/heraclitothiago/juscopy/blob/main/assets/thumbnail.png?raw=true")](http://www.youtube.com/watch?v=aowcQ-OEYrc)
+[![thumbnail]( "https://github.com/heraclitothiago/juscopy/blob/main/assets/thumbnail.png")](http://www.youtube.com/watch?v=aowcQ-OEYrc)
 
 
 ## Erros comuns
