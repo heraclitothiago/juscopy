@@ -32,6 +32,9 @@ var qEl = e => document.querySelector(e);
 ```
 Cole no console e aperte `enter`. A jurisprudência já está copiada e pronta para colar na sua petição.
 
+## Tutorial em vídeo
+[![thumbnail](http://img.youtube.com/vi/aowcQ-OEYrc/0.jpg)](http://www.youtube.com/watch?v=aowcQ-OEYrc "https://github.com/heraclitothiago/juscopy/blob/main/assets/thumbnail.png")
+
 ## Erros comuns
 ##### O Firefox não deixa colar o código no console:
 Clique no console e digite a mensagem solicitada para autorizar a cola do script
