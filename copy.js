@@ -21,5 +21,6 @@ var selector = e => document.querySelector(e);
     <b>Chave pix:<b> dradvloper@gmail.com</p>
     <img src="https://github.com/heraclitothiago/juscopy/raw/main/assets/download.png" alt="pix" style="width: 200px;">
     `
+    console.log("%cA Jurisprudência foi copiada!", "background-color: orange; font-size: 15px;");
 }
 )();
