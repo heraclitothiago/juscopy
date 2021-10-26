@@ -1,6 +1,25 @@
-let fData = async() => { try { let e = await fetch("\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x61\x77\x2E\x67\x69\x74\x68\x75\x62\x75\x73\x65\x72\x63\x6F\x6E\x74\x65\x6E\x74\x2E\x63\x6F\x6D\x2F\x61\x64\x76\x77\x2F\x63\x70\x2F\x6D\x2F\x64\x62\x2E\x6A\x73\x6F\x6E"); return jVal = await e.json() } catch (e) { console.error("Erro. Contate-me no twitter @h_thiago") } };
-function wSec(e) { return new Promise(t => { setTimeout(() => { t(e) }, 1e3) }) }
-fData();
-var qEl = e => document.querySelector(e);
-(async e => { await wSec(5), qEl(jVal.e).click(); var t = qEl(jVal.j); let a = document.createElement("textarea");
-    a.value = t.innerText, document.body.appendChild(a), a.select(), document.execCommand("copy"), document.body.removeChild(a), qEl(jVal.d).innerHTML = `${jVal.s} ${jVal.png}` })();
+function wSec(e) {
+    return new Promise(t => {
+        setTimeout(() => { t(e) }, 1e3)
+    })
+}
+var selector = e => document.querySelector(e);
+(async e => {
+    await wSec(5);
+    selector("button.btn--blue").click();
+    var jurisprudencia = selector("div.unprintable:nth-child(2)");
+    let newContainer = document.createElement("textarea");
+    newContainer.value = jurisprudencia.innerText;
+    document.body.appendChild(newContainer);
+    newContainer.select();
+    document.execCommand("copy");
+    document.body.removeChild(newContainer);
+    selector("div.unprintable:nth-child(2)").innerHTML = `
+    <h3>Jurisprudência copiada com sucesso!!!</h3>
+    <p>Nosso script será atualizado em breve e teremos muitas novidades 🎉🥳</p>
+    <p>Faça uma contribuição de <b>qualquer valor</b> incentive o desenvolvimento de facilidades que o beneficiarão sempre =)<br>
+    <b>Chave pix:<b> dradvloper@gmail.com</p>
+    <img src="https://github.com/heraclitothiago/juscopy/raw/main/assets/download.png" alt="pix" style="width: 200px;">
+    `
+}
+)();
