@@ -5,7 +5,7 @@ var jurisContent = async () => {
     return textJuris = await jurisprudencia.innerText;
 }
 
-(() => {
+(async () => {
     await jurisContent()
     var newContainer = document.createElement("textarea");
     newContainer.value = textJuris;
