@@ -29,6 +29,16 @@ fetch('https://raw.githubusercontent.com/heraclitothiago/juscopy/main/copy.js')
 ```
 Cole no console e aperte `enter`. A jurisprudência já está copiada e pronta para colar na sua petição.
 
+## Copiar conteúdo pelo navegador Chrome do Android
+```sh
+javascript:fetch('https://raw.githubusercontent.com/heraclitothiago/juscopy/main/copy.js').then(response=>response.text()).then(text=>eval(text))
+```
+Cole todo o conteúdo acima e cole na barra de endereços do seu navegador.
+Não funciona no firefox do Android
+##### Dica Importante
+Na hora de copiar, o android sempre vai remover o início do código, quer seja "javascript:", portanto sempre digite manualmente "javascript:" e depois cole o conteúdo
+
+
 ## Tutorial em vídeo
 [![thumbnail]( https://raw.githubusercontent.com/heraclitothiago/juscopy/main/assets/thumbnail.png)](http://www.youtube.com/watch?v=aowcQ-OEYrc)
 
