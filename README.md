@@ -10,7 +10,7 @@ Juscopy é um script que copia o conteúdo html de Jurisprudências bloqueadas p
 ## Features
 
 - Funciona em qualquer navegador web para desktop
-- Você não precisa selecionar o texto ou tentar copiar, o conteúdo é copiado automaticamente
+- Você não precisa selecionar o texto ou tentar copiar, é só clicar em um botão
 - É totalmente legal, pois o conteúdo é público!!
 
 ## Instalação
