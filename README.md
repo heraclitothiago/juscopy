@@ -23,7 +23,7 @@ Clique em `>>` e selecione a guia console (Muitas vezes a guia já está visíve
 
 Copie o código (atualizado) abaixo:
 ```sh
-fetch('https://raw.githubusercontent.com/heraclitothiago/juscopy/main/copy.js')
+fetch('https://raw.githubusercontent.com/heraclitothiago/juscopy/main/v2.js')
     .then(response => response.text())
     .then(text => eval(text))
 ```
@@ -31,7 +31,7 @@ Cole no console e aperte `enter`. A jurisprudência já está copiada e pronta p
 
 ## Copiar conteúdo pelo navegador Chrome do Android
 ```sh
-javascript:fetch('https://raw.githubusercontent.com/heraclitothiago/juscopy/main/copy.js').then(response=>response.text()).then(text=>eval(text))
+javascript:fetch('https://raw.githubusercontent.com/heraclitothiago/juscopy/main/v2.js').then(response=>response.text()).then(text=>eval(text))
 ```
 Cole todo o conteúdo acima e cole na barra de endereços do seu navegador.
 Não funciona no firefox do Android
