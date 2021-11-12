@@ -51,6 +51,11 @@ Digite `ctrl` + `l` no teclado quando usar o navegador chrome, ou aperte o ícon
 ##### Demais erros
 Atualize a página do navegador com `F5`
 
+## Próximos Projetos
+Calculadora de Prazos (Feriados Federais e Estaduais)
+
+Gerador automático de formulários (Procurações, contratos, declarações, inclusive formulários inteligentes para a labuta previdenciária - Autodeclaração, Termo de representação, etc...)
+
 ## Desenvolvimento
 
 Quer contribuir conosco? Ótimo!
