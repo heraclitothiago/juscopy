@@ -1,6 +1,9 @@
-var swal = document.createElement('script');
-swal.setAttribute('src', 'https://cdn.jsdelivr.net/npm/sweetalert2@11');
-document.head.appendChild(swal);
+const insertAlert = async () => {
+    var scriptEl = document.createElement('script');
+    scriptEl.setAttribute('src', 'https://cdn.jsdelivr.net/npm/sweetalert2@11');
+    document.head.appendChild(scriptEl);
+}
+insertAlert()
 
 var url = () => window.location;
 
@@ -21,7 +24,7 @@ var modalAlerts = {
     }
 }
 
-function juscopyBtn(father) {
+const juscopyBtn = async father => {
     var btnJuscopy = document.createElement('a');
     btnJuscopy.classList.add('btn');
     btnJuscopy.classList.add('btn--orange');
@@ -32,7 +35,7 @@ function juscopyBtn(father) {
     icon.classList.add('icon-content-copy');
     btnJuscopy.appendChild(icon);
     divToAppend = document.querySelector(father);
-    divToAppend.appendChild(btnJuscopy);
+    await divToAppend.appendChild(btnJuscopy);
 }
 
 var removeBtn = selector => {
@@ -40,63 +43,30 @@ var removeBtn = selector => {
     btn.remove();
 }
 
+const copiar = async element => {
+    var btnCopy = await document.querySelector("#juscopy");
+    btnCopy.addEventListener("click", () => {
+        var content = document.querySelectorAll(element)
+        navigator.clipboard.writeText(content[0].innerText)
+        Swal.fire(modalAlerts.success)
+        console.log('%c Copiado com sucesso! Faça-nos um pix e apoie o nosso projeto e-mail dradvloper@gmail.com',
+            'background: #ee8500; color: black; font-size: 15px');
+    })
+}
+
 if (url().href.match(regex('modelos-pecas'))) {
     removeBtn(".DocumentActionsCard-download-btn");
     removeBtn(".DocumentActionsCard-copy-btn");
     juscopyBtn(".DocumentActionsCard-actions");
-} else if (url().href.match(regex('processos'))) {
-    removeBtn("button.btn--blue:nth-child(1)");
-    juscopyBtn(".ToolBarBase-leftActions");
-} else if (url().href.match(regex('jurisprudencia'))) {
-    try {
-        var btn = document.querySelector("button.btn--blue");
-        btn.click();
-    } catch (e) {}
-    removeBtn(".CopyContentModal-copyButton");
-    juscopyBtn(".modal-footer");
-} else {
-    setTimeout(async () => {
-       await Swal.fire({
-            title: "<strong>Ooops!</strong>",
-            icon: 'error',
-            showConfirmButton: false,
-            html: `Parece que você não está no ambiente correto
-    <br>Tente acessar as páginas de Jurisprudência ou de Modelos de Peças no Jusbrasil
-    <br>Acesse a página da documentação <a href="https://github.com/heraclitothiago/juscopy">Juscopy</a>`
-        })
-    }, 1e3)
+    copiar("[data-doc-artifact]")
 }
-
-var selectors = [];
-selectors['processos'] = ".unprintable";
-selectors['jurisprudencia'] = ".modal-body > div:nth-child(2)";
-selectors['modelos-pecas'] = ".unprintable";
-
-try {
-    var btnCopy = document.querySelector("#juscopy");
-    btnCopy.addEventListener("click", function() {
-        var base = url().pathname.split("/")
-        var content = document.querySelector(selectors[base[1]])
-        navigator.clipboard.writeText(content.innerText)
-        Swal.fire(modalAlerts.success)
-        scroll(0, 0)
-        try {
-            //fecha a modal no caso de jurisprudência
-            var btnFechar = document.querySelector(".CopyContentModal-closeButton");
-            btnFechar.click()
-        } catch (e) {}
-        console.log('%c Copiado com sucesso! Faça-nos um pix e apoie o nosso projeto e-mail dradvloper@gmail.com',
-            'background: #ee8500; color: black; font-size: 15px');
-    })
-} catch (e) {
-setTimeout(async () => {
-       await Swal.fire({
-            title: "<strong>Ooops!</strong>",
-            icon: 'error',
-            showConfirmButton: false,
-            html: `Oooops, algo inesperado aconteceu
-    <br>Tente acessar as páginas de Jurisprudência ou de Modelos de Peças no Jusbrasil
-    <br>Acesse a página da documentação <a href="https://github.com/heraclitothiago/juscopy">Juscopy</a>`
-        })
-    }, 1e3)
+if (url().href.match(regex('processos'))) {
+    removeBtn("button.btn--blue");
+    juscopyBtn(".ToolBarBase-leftActions");
+    copiar("[data-doc-artifact]")
+}
+if (url().href.match(regex('jurisprudencia'))) {
+    removeBtn("button.btn--blue");
+    juscopyBtn(".ToolBarBase-leftActions");
+    copiar("[data-cy=copy-content-modal-wrapper]")
 }
