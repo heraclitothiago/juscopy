@@ -1,13 +1,10 @@
 var { pathname, search } = Object.fromEntries(new URLSearchParams(window.location));
 var [, target] = pathname.split("/");
 
-const insertAlert = async () => {
-    var scriptEl = document.createElement('script');
-    scriptEl.setAttribute('src', 'https://cdn.jsdelivr.net/npm/sweetalert2@11');
-    document.head.appendChild(scriptEl);
-}
+var scriptEl = document.createElement('script');
+scriptEl.setAttribute('src', 'https://cdn.jsdelivr.net/npm/sweetalert2@11');
+document.head.appendChild(scriptEl);
 
-insertAlert()
 
 var modalAlerts = {
     success: {
@@ -63,8 +60,11 @@ if (target == 'jurisprudencia') {
     copiar("[data-cy=copy-content-modal-wrapper]")
 }
 if (search != "") {
-    Swal.fire({
-        title: 'Ooops...',
-        text: 'Não encontramos nenhum conteúdo para copiar',
-    })
+    setTimeout(() => {
+        Swal.fire({
+            title: 'Ooops...',
+            text: 'Não encontramos nenhum conteúdo para copiar',
+        })
+    }, 1000);
 }
+
