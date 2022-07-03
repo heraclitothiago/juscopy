@@ -5,6 +5,17 @@ var scriptEl = document.createElement('script');
 scriptEl.setAttribute('src', 'https://cdn.jsdelivr.net/npm/sweetalert2@11');
 document.head.appendChild(scriptEl);
 
+const isLogged = document.querySelector("body > div.JB-2 > topbar > header > div > div > user-menu > div.topbar-profile") == null ? false : true;
+
+if (isLogged == false) {
+    setTimeout(() => {
+        Swal.fire({
+            title: 'Ooops...',
+            text: 'Faça login no jusbrasil para poder copiar o conteúdo!',
+        })
+        return;
+    }, 1000);
+}
 
 var modalAlerts = {
     success: {
@@ -67,4 +78,3 @@ if (search != "") {
         })
     }, 1000);
 }
-
