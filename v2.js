@@ -5,7 +5,7 @@ var scriptEl = document.createElement('script');
 scriptEl.setAttribute('src', 'https://cdn.jsdelivr.net/npm/sweetalert2@11');
 document.head.appendChild(scriptEl);
 
-const isLogged = document.querySelector("body > div.JB-2 > topbar > header > div > div > user-menu > div.topbar-profile") == null ? false : true;
+const isLogged = document.querySelector(".topbar-profile") == null ? false : true;
 
 if (isLogged == false) {
     setTimeout(() => {
