@@ -61,14 +61,15 @@ if (target == 'modelos-pecas') {
     copiar("[data-doc-artifact=MODELO_PECA] > [data-testid=copy-content-visible]")
 }
 if (target == 'processos') {
-    removeBtn("button.btn--blue");
-    juscopyBtn(".ToolBarBase-leftActions");
-    copiar("[data-doc-artifact]")
+    removeBtn(".MotionPage-toolBar > div > div > div > .ToolBarBase-leftActions > div > div.Dropdown.dropdown > div.Dropdown-trigger > button");
+    removeBtn(".MotionPage-toolBar > div > div > div > .ToolBarBase-leftActions > div > .WithMetricsDispatcher > button")
+    juscopyBtn(".MotionPage-toolBar > div > div > div > .ToolBarBase-leftActions > div");
+    copiar("[data-doc-artifact] > article")
 }
 if (target == 'jurisprudencia') {
-    removeBtn("button.btn--blue");
-    juscopyBtn(".ToolBarBase-leftActions");
-    copiar("[data-cy=copy-content-modal-wrapper]")
+    removeBtn(".ToolBarBase-leftActions > .LoginRequired > button");
+    juscopyBtn(".ToolBarBase-leftActions > .LoginRequired");
+    copiar("[data-doc-artifact=PECA] > article")
 }
 if (search != "") {
     setTimeout(() => {
