@@ -55,10 +55,10 @@ const copiar = element => {
 }
 
 if (target == 'modelos-pecas') {
-    removeBtn(".DocumentActionsCard-download-btn");
-    removeBtn(".DocumentActionsCard-copy-btn");
+    removeBtn(".DocumentActionsCard-actions > div:nth-child(2) > button");
+    removeBtn(".DocumentActionsCard-actions > div:nth-child(1) > button");
     juscopyBtn(".DocumentActionsCard-actions");
-    copiar("[data-doc-artifact]")
+    copiar("[data-doc-artifact=MODELO_PECA] > [data-testid=copy-content-visible]")
 }
 if (target == 'processos') {
     removeBtn("button.btn--blue");
