@@ -69,7 +69,7 @@ if (target == 'processos') {
 if (target == 'jurisprudencia') {
     removeBtn(".ToolBarBase-leftActions > .LoginRequired > button");
     juscopyBtn(".ToolBarBase-leftActions > .LoginRequired");
-    copiar("[data-doc-artifact=PECA] > article")
+    copiar("[data-doc-artifact=INTEIRO_TEOR] > article")
 }
 if (search != "") {
     setTimeout(() => {
