@@ -1,3 +1,8 @@
+# DEPRECADO
+
+Por motivos de foro intimo, decidi interromper definitivamente o desenvolvimento da ferramenta.
+Obrigado a todos que colaboraram diretamente e indirrtamente com o projeto.
+
 # JUSCOPY
 ## Gratuito, simples e automático
 
